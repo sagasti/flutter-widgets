@@ -696,8 +696,8 @@ class _FilterIcon extends StatelessWidget {
       // the overlay is the parent of every material app widget, we resolved
       // the issue by converting the global to local position of the current
       // overlay and used that new offset to display the show menu.
-      final RenderBox renderBox =
-          Overlay.of(context).context.findRenderObject()! as RenderBox;
+            final RenderBox renderBox =
+          Overlay.of(context)!.context.findRenderObject()! as RenderBox;
       final Offset newOffset = renderBox.globalToLocal(details.globalPosition);
       final Size viewSize = renderBox.size;
       showMenu(
